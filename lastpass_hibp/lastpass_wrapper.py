@@ -18,7 +18,8 @@ class LastPassWrapper:
         self.password = password
         self.mfa = mfa
 
-    def __token(self):
+    @staticmethod
+    def __token():
         return  getpass('YubiKey/Authenticator code: ')
 
     def vault(self):

@@ -5,9 +5,6 @@ from progressbar import ProgressBar
 from lastpass_hibp.hibp_checker import check_password
 from lastpass_hibp.lastpass_wrapper import LastPassWrapper
 
-class LastPassHIBP:
-    def check(arg=None):
-        print("check wtf")
 
 @click.command()
 @click.option('--mfa/--no-mfa', default=False, help='Ask for MFA by default.')
