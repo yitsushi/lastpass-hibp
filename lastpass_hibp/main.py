@@ -24,7 +24,7 @@ def run(mfa, output, username, password):
     with open(output, 'w') as f:
         with ProgressBar(max_value=number_of_accounts) as bar:
             i = 0
-            for account in vault.accounts[:10]:
+            for account in vault.accounts:
                 flag = 'leaked' if check_password(account.password) else ''
                 f.write("[{:6s}] <{:s}> {:s} @ {:s}\n".format(
                     flag,
